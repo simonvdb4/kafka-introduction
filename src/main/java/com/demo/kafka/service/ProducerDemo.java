@@ -28,9 +28,4 @@ public class ProducerDemo {
         log.info("Producing message: {}", message);
         this.producerKafkaTemplate.send(topic, message);
     }
-
-    // send data
-
-    // flush and close Producer
-
 }
