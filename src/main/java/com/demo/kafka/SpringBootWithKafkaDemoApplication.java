@@ -1,13 +1,13 @@
-package com.consultancy.kafkaintroduction;
+package com.demo.kafka;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class KafkaIntroductionApplication {
+public class SpringBootWithKafkaDemoApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(KafkaIntroductionApplication.class, args);
+        SpringApplication.run(SpringBootWithKafkaDemoApplication.class, args);
     }
 
 }
