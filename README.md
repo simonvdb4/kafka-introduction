@@ -15,7 +15,7 @@ Topics that are covered:
 `mvn clean compile`
 
 ## 2. Run Docker compose
-
+Run `docker-compose up` in the root folder to bring up Docker container of Kafka and Zookeeper.
 
 ## 3. Run application
 Run [SpringBootWithKafkaDemoApplication](src/main/java/com/demo/kafka/SpringBootWithKafkaDemoApplication.java) (see application.yml for Kafka Producer and consumer configuration). The application is exposed on the default Spring Application 8080 TCP port.
@@ -25,4 +25,4 @@ Run [SpringBootWithKafkaDemoApplication](src/main/java/com/demo/kafka/SpringBoot
   * For Windows: download the `.exe`
   * For Linux: download the `.sh` and execute is using the following command: `sh offsetexplorer.sh`
 
-Copyright © 2020, Simon Van den Bossche
+Copyright © 2022, Simon Van den Bossche
