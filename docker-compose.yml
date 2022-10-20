@@ -1,0 +1,34 @@
+version: "3"
+services:
+  zookeeper:
+    image: wurstmeister/zookeeper
+    ports:
+      - "2181:2181"
+  kafka:
+    image: wurstmeister/kafka
+    depends_on:
+      - zookeeper
+    ports:
+      - "9092:9092"
+    environment:
+      KAFKA_ADVERTISED_HOST_NAME: localhost
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+    command: sh -c "((sleep 15 && kafka-topics --create --zookeeper zookeeper:2181 --replication-factor 1 --partitions 3 --topic trAEning)&) && /etc/confluent/docker/run ">
+#  consumer:
+#    build: consumer
+#    image: kafka-consumer/consumer:latest
+##    environment:
+##      - "SPRING_PROFILES_ACTIVE=${ACTIVE_PROFILE}"
+#    ports:
+#      - "8080:8080"
+#    depends_on:
+#      - kafka
+#  producer:
+#    build: producer
+#    image: kafka-producer/producer:latest
+##    environment:
+##      - "SPRING_PROFILES_ACTIVE=${ACTIVE_PROFILE}"
+#    ports:
+#      - "8082:8082"
+#    depends_on:
+#      - kafka
