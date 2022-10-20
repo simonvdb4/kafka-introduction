@@ -9,8 +9,8 @@ import org.springframework.stereotype.Service;
 public class ConsumerDemo {
     private static final Logger log = LoggerFactory.getLogger(ConsumerDemo.class);
 
-    @KafkaListener(topics = "#{'${spring.kafka.template.default-topic}'}", groupId = "group_id") // groupId = consumer group id
+    @KafkaListener(topics = "trAEning", groupId = "group_id") // groupId = consumer group id
     public void consumeMessage(String message) {
-        log.info("Consumed message: {}", message);
+        log.warn("Consumed message: {}", message);
     }
 }
